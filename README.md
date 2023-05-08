@@ -19,6 +19,7 @@ The package structure of the project takes on the following form:
 <img src="cleanMVVM.png" />
 
 > Screenshots
+- Coming soon :rocket: :fire:
 
 # License
 > MIT License
