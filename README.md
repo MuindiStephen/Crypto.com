@@ -1,17 +1,22 @@
 # Crypto.com
 
 ## Built with Clean Architectural Principle
-- It is a basic 3-tier architecture which consist of **(presentation layer, business logic layer and data layer)** and a principle used to build modern applications for businesses.
+- It is a basic 3-tier architecture which consists of **(presentation layer, business logic layer and data layer)** and a principle used to build modern applications for businesses.
 
 ## Let's get Started
 The package structure of the project takes on the following form:
 
 ```
-  ├── Data
+  ├── Data 
   ├── Domain
   └── Presentation
 ```
 
+## How it Works
+- Presentation tier - Presentation Layer
+- Business Logic tier - Domain Layer
+- Data tier - Data / Database Streams Layer
+<img src="cleanMVVM.png" />
 
 > Screenshots
 
