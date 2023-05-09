@@ -1,13 +1,11 @@
 package com.steve_md.cryptocurrency.domain.model
 
-
-/**
- * Lighter Model class which renders our data to the UI
- */
-data class Coin (
+data class CoinDetail(
     val id: String,
+    val isActive: Boolean,
+    val isNew: Boolean,
     val name: String,
     val rank: Int,
     val symbol: String,
-    val isActive:Boolean
+    val type: String
 )
