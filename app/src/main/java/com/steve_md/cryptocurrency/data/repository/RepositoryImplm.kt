@@ -4,8 +4,9 @@ import com.steve_md.cryptocurrency.data.api.ApiService
 import com.steve_md.cryptocurrency.data.dto.CoinDetailDTO
 import com.steve_md.cryptocurrency.data.dto.CoinsDTO
 import com.steve_md.cryptocurrency.domain.repository.Repository
+import javax.inject.Inject
 
-class RepositoryImplm(
+class RepositoryImplm @Inject constructor(
     private val apiService: ApiService
 ) : Repository  {
     override suspend fun getAllCoins(): List<CoinsDTO> {
