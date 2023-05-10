@@ -10,10 +10,9 @@ import com.steve_md.cryptocurrency.common.Resource
 import com.steve_md.cryptocurrency.domain.model.CoinDetail
 import com.steve_md.cryptocurrency.domain.usecases.coin_detail.CoinDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.launchIn
 
 
 @HiltViewModel
