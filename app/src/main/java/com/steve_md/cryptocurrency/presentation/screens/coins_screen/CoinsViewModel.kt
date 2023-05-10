@@ -3,10 +3,12 @@ package com.steve_md.cryptocurrency.presentation.screens.coins_screen
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.steve_md.cryptocurrency.common.Resource
 import com.steve_md.cryptocurrency.domain.model.Coin
 import com.steve_md.cryptocurrency.domain.usecases.coin.CoinUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
@@ -36,7 +38,7 @@ class CoinsViewModel @Inject constructor(
                     _coinState.value = CoinsState(listOfCoins = response.data ?: emptyList())
                 }
             }
-        }
+        }.launchIn(viewModelScope)
     }
 }
 
