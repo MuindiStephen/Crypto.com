@@ -4,6 +4,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.steve_md.cryptocurrency.common.PARAM_COIN_ID
 import com.steve_md.cryptocurrency.common.Resource
 import com.steve_md.cryptocurrency.domain.model.CoinDetail
@@ -11,6 +12,8 @@ import com.steve_md.cryptocurrency.domain.usecases.coin_detail.CoinDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.launchIn
 
 
 @HiltViewModel
@@ -46,7 +49,7 @@ class CoinsDetailViewModel @Inject constructor(
                     _coinDetailState.value = CoinsDetailState(coinDetail = response.data)
                 }
             }
-        }
+        }.launchIn(viewModelScope)
     }
 }
 
