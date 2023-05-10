@@ -27,7 +27,10 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     val navController = rememberNavController()
-                    NavHost(navController = navController , startDestination = Screen.CoinsScreen.route) {
+                    NavHost(
+                        navController = navController,
+                        startDestination = Screen.CoinsScreen.route
+                    ) {
                         composable(
                             route = Screen.CoinsScreen.route
                         ) {
@@ -36,7 +39,7 @@ class MainActivity : ComponentActivity() {
                         composable(
                             route = Screen.CoinsDetailsScreen.route + "/{coinId}"
                         ) {
-                           CoinsDetailsScreen()
+                            CoinsDetailsScreen()
                         }
                     }
                 }
