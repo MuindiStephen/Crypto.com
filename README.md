@@ -1,5 +1,7 @@
 # Crypto.com
 
+[![CodeFactor](https://www.codefactor.io/repository/github/muindistephen/crypto.com/badge)](https://www.codefactor.io/repository/github/muindistephen/crypto.com)
+
 ## Built with Clean Architectural Principle
 - It is a basic 3-tier architecture which consists of **(presentation layer, business logic layer and data layer)** and a principle used to build modern applications for businesses.
 
